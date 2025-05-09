@@ -42,13 +42,29 @@ class AppLogo extends StatelessWidget {
         ),
         const SizedBox(height: 2),
         // Tagline
-        Text(
-          "Meaningful Microblogging",
-          style: TextStyle(
-            fontSize: taglineFontSize,
-            color: const Color(0xFF5159FF),
+        RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              style: const TextStyle(fontSize: 12, color: Colors.black54),
+              children: [
+                TextSpan(
+                  text: "Monetized ",
+                  style: TextStyle(
+                    fontSize: taglineFontSize,
+                    color: const Color(0xFF5159FF),
+                    fontWeight: FontWeight.bold,
+                  )
+                ),
+                TextSpan(
+                  text: "microblogging",
+                  style: TextStyle(
+                    fontSize: taglineFontSize,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
       ],
     );
   }

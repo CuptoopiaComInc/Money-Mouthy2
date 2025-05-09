@@ -85,7 +85,7 @@ class _SplashScreenState extends State<SplashScreen>{
             const SizedBox(height: 5),
             // Tagline
             const Text(
-              'Put Yo Money Where Yo Muth is!',
+              'Put Yo Money Where Yo Muuth is!',
               style: TextStyle(
                 fontSize: 16,
                 fontStyle: FontStyle.italic,
