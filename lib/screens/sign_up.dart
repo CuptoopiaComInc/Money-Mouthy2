@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:money_mouthy_two/screens/create_account.dart';
+import 'package:money_mouthy_two/widgets/app_logo.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -17,42 +18,9 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: 60),
               
               // Logo and app name
-              Column(
-                children: [
-                  // App Logo
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 177, 175, 175),
-                    ),
-                    child: ClipOval(
-                      child: Image.asset(
-                        'assets/images/money_mouth.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  // App Name
-                  const Text(
-                    "Money Mouthy",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 2),
-                  // Tagline
-                  const Text(
-                    "Meaningful Microblogging",
-                    style: TextStyle(
-                      fontSize: 8,
-                      color: Color(0xFF5159FF),
-                    ),
-                  ),
-                ],
+              const Center(
+                child: AppLogo(
+                ),
               ),
               
               const SizedBox(height: 50),

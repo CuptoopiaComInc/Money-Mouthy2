@@ -49,9 +49,6 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               // Logo and App name
               const Center(
                 child: AppLogo(
-                  logoSize: 100,
-                  titleFontSize: 18,
-                  taglineFontSize: 10,
                 ),
               ),
               const SizedBox(height: 40),

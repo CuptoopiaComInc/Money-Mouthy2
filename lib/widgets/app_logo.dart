@@ -9,7 +9,7 @@ class AppLogo extends StatelessWidget {
     Key? key,
     this.logoSize = 100,
     this.titleFontSize = 18,
-    this.taglineFontSize = 8,
+    this.taglineFontSize = 10,
   }) : super(key: key);
 
   @override
@@ -53,12 +53,14 @@ class AppLogo extends StatelessWidget {
                     fontSize: taglineFontSize,
                     color: const Color(0xFF5159FF),
                     fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
                   )
                 ),
                 TextSpan(
                   text: "microblogging",
                   style: TextStyle(
                     fontSize: taglineFontSize,
+                    fontStyle: FontStyle.italic,
                     color: Colors.black,
                   ),
                 ),
