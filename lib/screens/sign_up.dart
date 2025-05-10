@@ -157,7 +157,7 @@ class SignUpScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context)=> const CreateAccountScreen())
-                    );
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF5159FF),

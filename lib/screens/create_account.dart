@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_mouthy_two/screens/otp_verification.dart';
 import '../widgets/app_logo.dart';
 import '../widgets/button.dart';
 import '../widgets/terms_and_conditions.dart';
@@ -52,11 +53,10 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 ),
               ),
               const SizedBox(height: 40),
-              // Create your account text
               // Create your account text with indicator
               const PageTitleWithIndicator(
                 title: 'Create your account',
-                progress: 0.20,
+                positionFactor: 0,
               ),
               const SizedBox(height: 24),
               // Name field
@@ -189,8 +189,29 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               PurpleButton(
                 buttonText: 'Next',
                 onPressed: () {
-                  // Add your validation and next screen navigation here
-                },
+                  // Get the email from the controller
+                  final email = _emailController.text.trim();
+                  
+                  // Validate email is not empty
+                  if (email.isNotEmpty) {
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute(
+                        builder: (context) => OtpVerificationScreen(
+                          email: email, // Pass the email from the text field
+                        ),
+                      ),
+                    );
+                  } else {
+                    // Show error if email is empty
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Please enter an email address'),
+                        backgroundColor: Colors.red,
+                      ),
+                    );
+                  }
+                }
               ),
               const SizedBox(height: 24),
               // Terms and conditions text
