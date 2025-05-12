@@ -32,6 +32,34 @@ class _CreateProfileState extends State<CreateProfile> {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 12.0),
+            child: TextButton(
+              onPressed: () {
+                // Handle skip logic here
+                print("Skip for Now pressed");
+              },
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.grey[200], // Color with opacity
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0), // Rounded corners
+                ),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 8,
+                ),
+                minimumSize: Size.zero, // Set minimum size constraints
+                tapTargetSize:
+                    MaterialTapTargetSize.shrinkWrap, // Remove extra padding
+              ),
+              child: const Text(
+                'Skip for Now',
+                style: TextStyle(color: Colors.black, fontSize: 10),
+              ),
+            ),
+          ),
+        ],
       ),
       body: SafeArea(
         child: LayoutBuilder(
@@ -60,7 +88,7 @@ class _CreateProfileState extends State<CreateProfile> {
                               ),
                             ),
                             Positioned(
-                              left: (200+100) * 0.5,
+                              left: (200 + 100) * 0.5,
                               top: 2.5,
                               child: Container(
                                 width: 50,
