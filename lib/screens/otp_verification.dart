@@ -62,7 +62,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
         ),
       ),
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
             children: [
@@ -76,7 +76,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
 
               // Create your account text with indicator
               const PageTitleWithIndicator(
-                title: 'OTP Veficication',
+                title: 'OTP Verification',
                 positionFactor: 0.5,
               ),
               
@@ -123,7 +123,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     "Haven't received the verification code?",
                     style: TextStyle(
                       color: Colors.grey[600],
-                      fontSize: 14,
+                      fontSize: 12,
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -162,7 +162,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 },
               ),
               
-              const SizedBox(height: 24),
+              const SizedBox(height: 40),
               
               // Terms and conditions text
               TermsAndConditions(),
@@ -176,11 +176,12 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
 
   Widget _buildOtpTextField(int index) {
     return Container(
-      width: 52,
-      height: 52,
+      width: 42,
+      height: 42,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey[300]!),
         borderRadius: BorderRadius.circular(8),
+        color: const Color.fromARGB(255, 230, 230, 230)
       ),
       child: TextField(
         controller: _controllers[index],
